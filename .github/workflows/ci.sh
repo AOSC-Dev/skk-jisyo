@@ -10,7 +10,9 @@ cd openlab.ring.gr.jp/skk/dic/
 echo "[+] Checking file integrity ... "
 md5sum -c -- *.md5
 echo "[+] Removing unneeded files ... "
-rm -v -- *.md5 *.html* *.tar.*
+rm -v -- *.md5 *.html*
+# do not merge this line into the previous: shell expansion
+rm -v -- *.tar.*
 
 for i in *.gz; do
     echo "[+] Decompressing ${i} ..."
